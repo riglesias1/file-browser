@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+  file-browser:
+    container_name: file-browser
+    build: .
+    restart: unless-stopped
+    environment:
+      - TZ=America/Argentina/Buenos_Aires
+    volumes:
+      - ./home:/srv
+      - ./visuals:/visuals
+      - ./config/filebrowser.db:/database.db
+      - ./config/filebrowser.json:/.filebrowser.json
+    ports:
+      - 82:80
+    expose:
+      - 82
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - file-browser
+
+networks:
+  file-browser:
+    ipam:
+      driver: default
