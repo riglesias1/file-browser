@@ -1,9 +1,8 @@
-version: '3.1'
 services:
   file-browser:
-    container_name: file-browser
-    build: .
+    container_name: explorer
     restart: unless-stopped
+    build: .
     environment:
       - TZ=America/Argentina/Buenos_Aires
     volumes:
