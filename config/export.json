@@ -30,7 +30,7 @@
         },
         "authMethod": "json",
         "branding": {
-            "name": "Rodrigazo",
+            "name": "Personal Drive",
             "disableExternal": false,
             "files": "/visuals",
             "theme": "dark",
