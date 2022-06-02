@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
+#login form {
+    font-family: 'Poppins', sans-serif;
+}
+
+#login form h1 {
+    margin: 0.8em 0 0.8em;
+    font-weight: 400;
+}
+/* Posibility of other image in login screen */
 #login form img {
     content: url("./img/isotipo.svg");
     width: 10em;
     height: auto;
-}
-
-#login form h1 {
-    font-family: 'Poppins', sans-serif;
-    margin: 0.8em 0 0.8em;
-    font-weight: 400;
 }
 
 :root {
@@ -1084,11 +1087,6 @@ header button[aria-label="Buscar"] i:after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg>');
 }
 
-/* Search in normal view */
-#input i.material-icons {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg>');
-}
-
 header button[aria-label="Share"] i:after,
 header button[aria-label="Compartir"] i:after,
 #file-selection button[aria-label="Share"] i:after,
@@ -1159,6 +1157,11 @@ header button[aria-label="Más"] i:after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path> <path d="M9 12l2 2 4-4"></path> </svg>');
 }
 
+/* Search in mosaic/list view */
+#search #input i:after {
+    top: 0.5em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg>');
+}
 /* Sidebar icon style */
 /* Disable old icons */
 nav button i.material-icons {
@@ -1281,7 +1284,6 @@ main div .message i:after {
 
 /* Folders in mosaic view */
 #listing.mosaic div[data-dir="true"]:not(#multiple-selection) i:after {
-    width: 97%;
     top: -2px;
     left: 4px;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/> </svg>');
