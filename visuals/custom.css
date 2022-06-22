@@ -447,6 +447,7 @@ input:focus,
     margin: 0 1em 1em 1em;
     width: -o-calc(100% - 2em);
     width: calc(100% - 2em);
+    height: 15em;
 }
 
 .shell__result {
@@ -1047,8 +1048,10 @@ table tr {
 
 /* Header/File-Selection icon style */
 /* Disable old icons */
-header button i.material-icons:not(button[aria-label="Save"] i),
-header button i.material-icons:not(button[aria-label="Guardar"] i),
+/* header button i.material-icons:not(button[aria-label="Save"] i),
+header button i.material-icons:not(button[aria-label="Guardar"] i), */
+header button[aria-label="Search"] i,
+header button[aria-label="Buscar"] i,
 #file-selection button i.material-icons,
 #input i.material-icons,
 #dropdown i.material-icons {
@@ -1139,7 +1142,9 @@ header button[aria-label="Más"] i:after {
 }
 
 #dropdown button[aria-label="Download"] i:after,
-#dropdown button[aria-label="Descargar"] i:after {
+header button[aria-label="Download"] i:after,
+#dropdown button[aria-label="Descargar"] i:after,
+header button[aria-label="Descargar"] i:after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path> <polyline points="7 10 12 15 17 10"></polyline> <line x1="12" y1="15" x2="12" y2="3"></line> </svg>');
 }
 
@@ -1153,7 +1158,9 @@ header button[aria-label="Más"] i:after {
 }
 
 #dropdown button[aria-label="Select multiple"] i:after,
-#dropdown button[aria-label="Selección múltiple"] i:after {
+header button[aria-label="Select multiple"] i:after,
+#dropdown button[aria-label="Selección múltiple"] i:after,
+header button[aria-label="Selección múltiple"] i:after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path> <path d="M9 12l2 2 4-4"></path> </svg>');
 }
 
@@ -1255,6 +1262,8 @@ nav button[aria-label="Cerrar sesión"] i:after {
 /* Disable old icons */
 #listing.mosaic i.material-icons:not(div[aria-label="Clear"] i),
 #listing.list i.material-icons:not(.item.header i):not(div[aria-label="Clear"] i),
+#listing.mosaic i.material-icons:not(div[aria-label="Limpiar"] i),
+#listing.list i.material-icons:not(.item.header i):not(div[aria-label="Limpiar"] i),
 .shell .shell__prompt i.material-icons,
 .card .card-action .action i.material-icons,
 main div .message i.material-icons,
@@ -1268,6 +1277,8 @@ main div .message i.material-icons,
 /* Position new icons */
 #listing.mosaic div i:not(div[aria-label="Clear"] i):after,
 #listing.list div i:not(.item.header i):not(div[aria-label="Clear"] i):after,
+#listing.mosaic div i:not(div[aria-label="Limpiar"] i):after,
+#listing.list div i:not(.item.header i):not(div[aria-label="Limpiar"] i):after,
 .shell .shell__prompt i:after,
 .card .card-action .action i:after,
 #previewer button i:after,
@@ -1285,7 +1296,7 @@ main div .message i:after {
 /* Folders in mosaic view */
 #listing.mosaic div[data-dir="true"]:not(#multiple-selection) i:after {
     top: -2px;
-    left: 4px;
+    left: 0px;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/> </svg>');
 }
 
@@ -1301,15 +1312,21 @@ main div .message i:after {
 }
 
 /* Files in mosaic view */
-#listing.mosaic div i:not(div[aria-label="Clear"] i):after {
-    width: 97%;
+#listing.mosaic div i:not(div[aria-label="Clear"] i):after,
+#listing.mosaic div i:not(div[aria-label="Limpiar"] i):after {
+    width: 100%;
+    top: -9px;
+    left: -1px;
+    /* width: 97%;
     top: -2px;
     left: 4px;
+        */
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path> <polyline points="14 2 14 8 20 8"></polyline> </svg>');
 }
 
 /* Files in list view */
-#listing.list div i:not(.item.header i):not(div[aria-label="Clear"] i):after {
+#listing.list div i:not(.item.header i):not(div[aria-label="Clear"] i):after,
+#listing.list div i:not(.item.header i):not(div[aria-label="Limpiar"] i):after {
     top: 0;
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%238eb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path> <polyline points="14 2 14 8 20 8"></polyline> </svg>');
 }

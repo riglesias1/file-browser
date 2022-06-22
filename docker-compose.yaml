@@ -2,11 +2,12 @@ services:
   file-browser:
     container_name: explorer
     restart: unless-stopped
-    build: .
+    build: . # v2.21.1
+    command: sh -c "/config/startup.sh"
     environment:
       - TZ=America/Argentina/Buenos_Aires
     volumes:
-      - ./home:/srv
+      - /media/multimedia/file-browser:/home
       - ./visuals:/visuals
       - ./config/filebrowser.db:/database.db
       - ./config/filebrowser.json:/.filebrowser.json

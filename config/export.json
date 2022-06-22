@@ -52,7 +52,7 @@
         "rules": []
     },
     "server": {
-        "root": "/srv",
+        "root": "/home",
         "baseURL": "",
         "socket": "",
         "tlsKey": "",

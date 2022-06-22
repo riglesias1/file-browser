@@ -16,4 +16,4 @@ COPY config /config
 RUN rm -rf /database.db && touch database.db
 RUN filebrowser config init
 
-CMD ["/config/startup.sh"]
+# CMD ["/config/startup.sh"]
